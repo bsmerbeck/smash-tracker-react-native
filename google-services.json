@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "781901075636",
+    "firebase_url": "https://smash-tracker-f97b7.firebaseio.com",
+    "project_id": "smash-tracker-f97b7",
+    "storage_bucket": "smash-tracker-f97b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781901075636:android:37e878235c7577291973e1",
+        "android_client_info": {
+          "package_name": "com.bsmerbeck.smashtracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781901075636-5b15tlgfl4omnqsglceuatvah9te9c3l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt3qO9wkQwZo9KjfUaGplBGU4_Dq5WI5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "781901075636-5b15tlgfl4omnqsglceuatvah9te9c3l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

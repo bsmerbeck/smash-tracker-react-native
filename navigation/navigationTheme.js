@@ -1,16 +1,13 @@
-import { DefaultTheme } from '@react-navigation/native';
+import { DarkTheme } from 'react-native-paper';
 
 import Colors from '../utils/colors';
 
 const navigationTheme = {
-  ...DefaultTheme,
+  ...DarkTheme,
   // override colors
   colors: {
-    ...DefaultTheme.colors,
+    ...DarkTheme.colors,
     primary: Colors.primary,
-    text: Colors.primary,
-    border: Colors.mediumGrey,
-    background: Colors.ghostWhite
   }
 };
 

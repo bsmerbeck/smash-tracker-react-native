@@ -6,6 +6,7 @@ import useStatusBar from '../hooks/useStatusBar';
 import {loginWithGmail} from "../components/Firebase/firebase";
 import firebase from 'firebase';
 import * as Google from "expo-google-app-auth";
+import {Headline, Paragraph} from "react-native-paper";
 
 const isUserEqual = (googleUser, firebaseUser) => {
   if (firebaseUser) {
@@ -97,12 +98,18 @@ export default function WelcomeScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.logoContainer}>
-        <Image source={require('../assets/flame.png')} style={styles.logo} />
-        <Text style={styles.subtitle}>Expo Firebase Starter</Text>
+      <View style={{justifyContent: 'flex-start', alignItems: 'center', flex: 2, width: "100%",  position: 'absolute', top: 0}}>
+        <Image source={require('../assets/classic-mode-banner.jpg')} style={styles.logo} />
+        <Headline style={{marginTop: 50, color: "#fff", fontSize: 32, fontWeight: "bold"}}>Smash Tracker</Headline>
+        <Paragraph style={{textAlign: "center", margin: 20}}>
+          Smash Tracker is a fan-made dashboard to track your Smash Ultimate
+          matches. By reporting your matches, the tracker will display your
+          progress. View your best and worst matchups, progress by character,
+          and more. Smash Tracker is ALWAYS open to feature suggestions.
+        </Paragraph>
       </View>
       <View style={styles.buttonContainer}>
-        <AppButton color="ghostWhite" title="Login with Google" onPress={() => signInWithGoogleAsync()} />
+        <AppButton  color="mediumGrey" title="Login with Google" onPress={() => signInWithGoogleAsync()} />
         <AppButton title="Login" onPress={() => navigation.navigate('Login')} />
         <AppButton
           title="Register"
@@ -123,21 +130,23 @@ const styles = StyleSheet.create({
   },
   logoContainer: {
     position: 'absolute',
-    top: 60,
+    width: "100%",
+    top: 0,
     alignItems: 'center'
   },
   logo: {
-    width: 125,
-    height: 125
+    width: "100%",
+    height: 100
   },
   subtitle: {
-    fontSize: 24,
-    fontWeight: '600',
+    fontSize: 36,
+    fontWeight: 'bold',
+    marginTop: 100,
     paddingVertical: 20,
-    color: Colors.primary
+    color: '#fff'
   },
   buttonContainer: {
-    padding: 20,
+    padding: 0,
     paddingBottom: 60,
     width: '100%'
   }

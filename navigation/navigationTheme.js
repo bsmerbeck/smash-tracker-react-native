@@ -1,13 +1,15 @@
 import { DarkTheme } from 'react-native-paper';
 
-import Colors from '../utils/colors';
+import colors from '../utils/colors';
 
 const navigationTheme = {
   ...DarkTheme,
+  dark: true,
   // override colors
   colors: {
     ...DarkTheme.colors,
-    primary: Colors.primary,
+    primary: '#ff0000',
+    secondary: colors.mediumGrey,
   }
 };
 

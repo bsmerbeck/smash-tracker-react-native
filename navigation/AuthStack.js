@@ -10,7 +10,7 @@ const Stack = createStackNavigator();
 
 export default function AuthStack() {
   return (
-    <Stack.Navigator theme={DarkTheme} initialRouteName="Welcome" headerMode="none">
+    <Stack.Navigator initialRouteName="Welcome" headerMode="none">
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Register" component={RegisterScreen} />

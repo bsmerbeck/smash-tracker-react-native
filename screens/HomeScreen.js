@@ -1,11 +1,12 @@
 import React, {useContext} from 'react';
-import { View, StyleSheet } from 'react-native';
+import {View, StyleSheet, Image} from 'react-native';
 import {StackActions} from "@react-navigation/native";
 import {Headline, Paragraph, Button, withTheme} from 'react-native-paper'
 import useStatusBar from '../hooks/useStatusBar';
 import { logout } from '../components/Firebase/firebase';
 import {AuthUserContext} from "../navigation/AuthUserProvider";
 import firebase from 'firebase';
+import AppButton from "../components/AppButton";
 
 const HomeScreen = (props) => {
   //useStatusBar('dark-content');
@@ -35,8 +36,9 @@ const HomeScreen = (props) => {
   }
   return (
     <View style={styles.container}>
-      <View style={{justifyContent: 'flex-start', alignItems: 'center', flex: 2, marginTop: 30}}>
-        <Headline>Smash Tracker</Headline>
+      <View style={{justifyContent: 'flex-start', alignItems: 'center', flex: 2, width: "100%",  position: 'absolute', top: 0}}>
+        <Image source={require('../assets/classic-mode-banner.jpg')} style={styles.logo} />
+        <Headline style={{marginTop: 50, color: "#fff", fontSize: 32, fontWeight: "bold"}}>Smash Tracker</Headline>
         <Paragraph style={{textAlign: "center", margin: 20}}>
           Smash Tracker is a fan-made dashboard to track your Smash Ultimate
           matches. By reporting your matches, the tracker will display your
@@ -44,15 +46,14 @@ const HomeScreen = (props) => {
           and more. Smash Tracker is ALWAYS open to feature suggestions.
         </Paragraph>
       </View>
-      <View style={{width: "100%", justifyContent: 'flex-end', alignItems: "center", flex: 1}}>
-        <Button
+      <View style={{width: "100%", justifyContent: 'flex-end', alignItems: "center", flex: 1, paddingBottom: 60}}>
+        <AppButton title="Start"
           style={{width: "80%", paddingTop: 5, paddingBottom: 5, margin: 5}}
-          mode="contained"
-          color={theme.colors.secondary}  onPress={goToCharacter}>Start</Button>
-        <Button
+          color="primary"  onPress={goToCharacter}/>
+        <AppButton
+          title="Sign Out"
           style={{width: "80%", paddingTop: 5, paddingBottom: 5, margin: 5}}
-          mode="contained"
-          color={theme.colors.secondary}  onPress={handleSignOut}>Sign Out</Button>
+          color="mediumGrey"  onPress={handleSignOut}/>
       </View>
     </View>
   );
@@ -65,6 +66,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-start",
     alignItems: "center",
-    margin: 10
-  }
+    margin: 0
+  },
+  logo: {
+    width: "100%",
+    height: 100
+  },
 });

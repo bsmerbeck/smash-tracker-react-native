@@ -8,6 +8,10 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
+.idea/*
+.idea
+firebase.js
+../smash-tracker-native/google-services.json
 
 # macOS
 .DS_Store

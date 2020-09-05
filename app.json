@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "smash-tracker-rn",
-    "slug": "smash-tracker-rn",
+    "name": "Smash Tracker",
+    "slug": "smash-tracker",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -17,7 +17,13 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.bsmerbeck.smashtracker"
+
+    },
+    "android": {
+      "package": "com.bsmerbeck.smashtracker",
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "favicon": "./assets/favicon.png"
